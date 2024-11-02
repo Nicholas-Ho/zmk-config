@@ -1,0 +1,174 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  default:
+  - TAB
+  - B
+  - L
+  - D
+  - C
+  - V
+  - J
+  - Y
+  - O
+  - U
+  - ','
+  - ESC
+  - LCTRL
+  - N
+  - R
+  - T
+  - S
+  - G
+  - P
+  - H
+  - A
+  - E
+  - I
+  - /
+  - LSHFT
+  - X
+  - Q
+  - M
+  - W
+  - Z
+  - K
+  - F
+  - ''''
+  - ;
+  - .
+  - RALT
+  - {t: LGUI, h: function}
+  - lower
+  - SPACE
+  - BSPC
+  - raise
+  - RET
+  lower:
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - +
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - ESC
+  - LCTRL
+  - Ctl+ Z
+  - Ctl+ V
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ Y
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - /
+  - {t: ▽, type: trans}
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '='
+  - RALT
+  - {t: ▽, type: trans}
+  - {type: held}
+  - SPACE
+  - BSPC
+  - {t: ▽, type: trans}
+  - RET
+  raise:
+  - TAB
+  - '`'
+  - <
+  - '>'
+  - '"'
+  - '#'
+  - '&'
+  - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - '%'
+  - ESC
+  - LCTRL
+  - '!'
+  - '-'
+  - +
+  - '='
+  - _
+  - '|'
+  - ':'
+  - (
+  - )
+  - '?'
+  - {t: ▽, type: trans}
+  - LSHFT
+  - ^
+  - /
+  - '*'
+  - \
+  - .
+  - '~'
+  - $
+  - '{'
+  - '}'
+  - '@'
+  - RALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SPACE
+  - BSPC
+  - {type: held}
+  - RET
+  function:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - LCTRL
+  - HOME
+  - END
+  - PG DN
+  - PG UP
+  - {t: ▽, type: trans}
+  - INS
+  - DOWN
+  - LEFT
+  - RIGHT
+  - UP
+  - {t: ▽, type: trans}
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RALT
+  - {type: held}
+  - {t: ▽, type: trans}
+  - SPACE
+  - BSPC
+  - {t: ▽, type: trans}
+  - RET
