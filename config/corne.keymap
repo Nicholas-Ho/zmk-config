@@ -15,17 +15,18 @@
 
                 default_layer {
 // -----------------------------------Gallium v1---------------------------------------------
-// |  TAB |  B  |  L  |      D      |  C  |  V  |   |  J   |  Y  |  O  |  U  |  ,  | ESC |
-// | CTRL |  N  |  R  |      T      |  S  |  G  |   |  P   |  H  |  A  |  E  |  I  |  /  |
-// | SHFT |  X  |  Q  |      M      |  W  |  Z  |   |  K   |  F  |  '  |  ;  |  .  | ALT |
-//                    | GUI (LT:FN) | LWR | SPC |   | BKSP | RSE | RET |
+// |  TAB |  B  |  L  |      D      |  C  |       V      |   |  J   |  Y  |  O  |  U  |  ,  | ESC |
+// | CTRL |  N  |  R  |      T      |  S  |       G      |   |  P   |  H  |  A  |  E  |  I  |  /  |
+// | SHFT |  X  |  Q  |      M      |  W  |       Z      |   |  K   |  F  |  '  |  ;  |  .  | ALT |
+//                    | GUI (LT:FN) | LWR | SPC (LT:NAV) |   | BKSP | RSE | RET |
                         bindings = <
    &kp TAB   &kp B &kp L &kp D &kp C &kp V   &kp J &kp Y  &kp O     &kp U   &kp COMMA &kp ESC
    &kp LCTRL &kp N &kp R &kp T &kp S &kp G   &kp P &kp H  &kp A     &kp E   &kp I    &kp FSLH
    &kp LSHFT &kp X &kp Q &kp M &kp W &kp Z   &kp K &kp F  &kp SQT &kp SEMI &kp DOT &kp RALT
-                  &lt 3 LGUI &mo 1 &kp SPACE   &kp BSPC &mo 2 &kp RET
+              &lt 3 LGUI &mo 1 &lt 4 SPACE   &kp BSPC &mo 2 &kp RET
                         >;
                 };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2   | BT3 | BT4  | BT5  |   |  +   |  7  |  8  |  9  | * | ESC |
@@ -42,29 +43,43 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  `  |  <  |  >  |  "  |  #  |   |  &   |     |  [  |  ]  | % | ESC |
+// |  TAB |  `  |  <  |  >  |  "  |  #  |   |  &   |     |  {  |  }  | % | ESC |
 // | CTRL |  !  |  -  |  +  |  =  |  _  |   | "|"  |  :  |  (  |  )  | ? |     |
-// | SHFT |  ^  |  /  |  *  |  \  |  .  |   |  ~   |  $  |  {  |  }  | @ | ALT |
+// | SHFT |  ^  |  /  |  *  |  \  |  .  |   |  ~   |  $  |  [  |  ]  | @ | ALT |
 //                    |     |     | SPC |   | BKSP |     | RET |
                         bindings = <
-   &kp  TAB  &kp GRAVE &kp LT    &kp GT    &kp DQT   &kp HASH    &kp AMPS  &trans    &kp LBKT &kp RBKT &kp PRCNT &kp ESC
+   &kp  TAB  &kp GRAVE &kp LT    &kp GT    &kp DQT   &kp HASH    &kp AMPS  &trans    &kp LBRC &kp RBRC &kp PRCNT &kp ESC
    &kp LCTRL &kp EXCL  &kp MINUS &kp PLUS  &kp EQUAL &kp UNDER   &kp PIPE  &kp COLON &kp LPAR &kp RPAR &kp QMARK &trans
-   &kp LSHFT &kp CARET &kp FSLH  &kp ASTRK &kp BSLH  &kp DOT     &kp TILDE &kp DLLR  &kp LBRC &kp RBRC &kp  AT   &kp RALT
+   &kp LSHFT &kp CARET &kp FSLH  &kp ASTRK &kp BSLH  &kp DOT     &kp TILDE &kp DLLR  &kp LBKT &kp RBKT &kp  AT   &kp RALT
                                  &trans    &trans    &kp SPACE   &kp BSPC  &trans    &kp RET
                         >;
                 };
 
                 function_layer {
 // -----------------------------------------------------------------------------------------
-// |  F1  |    F2    |    F3    |  F4    |     F5      |     F6    |   |  F7  | F8   | F9   |  F10  | F11 |     F12       |
-// | CTRL |   HOME   |    END   | PG_DN  |    PG_UP    |    LOCK   |   | INS  | DOWN | LEFT | RIGHT | UP  | EXT_POWER_OFF |
-// | SHFT | VOL_MUTE | VOL_DOWN | VOL_UP | BRIGHT_DOWN | BRIGHT_UP |   | DEL  |      |      |       |     |     ALT       |
+// |  F1  |    F2    |    F3    |  F4    |     F5      |     F6    |   |  F7  | F8   | F9   | F10 |  F11  |     F12       |
+// | CTRL |   HOME   |    END   | PG_DN  |    PG_UP    |    LOCK   |   | INS  | LEFT | DOWN | UP  | RIGHT | EXT_POWER_OFF |
+// | SHFT | VOL_MUTE | VOL_DOWN | VOL_UP | BRIGHT_DOWN | BRIGHT_UP |   | DEL  |      |      |     |       |     ALT       |
 //                              |        |             |    SPC    |   | BKSP |      | RET  |
                         bindings = <
-   &kp  F1   &kp  F2    &kp F3        &kp F4       &kp F5       &kp F6       &kp F7   &kp F8   &kp F9   &kp F10   &kp F11 &kp F12
-   &kp LCTRL &kp HOME   &kp END       &kp PG_DN    &kp PG_UP    &kp LG(L)    &kp INS  &kp DOWN &kp LEFT &kp RIGHT &kp UP  &ext_power EP_OFF
-   &kp LSHFT &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp DEL  &trans   &trans   &trans    &trans  &kp RALT
+   &kp  F1   &kp  F2    &kp F3        &kp F4       &kp F5       &kp F6       &kp F7   &kp F8   &kp F9   &kp F10 &kp F11 &kp F12
+   &kp LCTRL &kp HOME   &kp END       &kp PG_DN    &kp PG_UP    &kp LG(L)    &kp INS  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &ext_power EP_OFF
+   &kp LSHFT &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp DEL  &trans   &trans   &trans  &trans  &kp RALT
                                       &trans       &trans       &kp SPACE    &kp BSPC &trans   &kp RET
+                        >;
+                };
+
+                nav_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |     |     |     |     |     |   |      |     |  }  |  {  |   | ESC |
+// | CTRL |  ^  |  B  |  W  |  $  |     |   |      |  H  |  J  |  K  | L |     |
+// | SHFT |     |     |     |     |     |   |      |     |     |     |   | ALT |
+//                    |     |     |     |   | BKSP |     | RET |
+                        bindings = <
+   &kp  TAB  &trans    &trans &trans &trans   &trans   &trans &trans &kp RBRC &kp LBRC &trans &kp RALT
+   &kp LCTRL &kp CARET &kp B  &kp W  &kp DLLR &trans   &trans &kp H  &kp J    &kp K    &kp L  &trans
+   &kp LSHFT &trans    &trans &trans &trans   &trans   &trans &trans &trans   &trans   &trans &kp RALT
+                                &trans &trans &trans   &kp BSPC &trans &kp RET
                         >;
                 };
         };
