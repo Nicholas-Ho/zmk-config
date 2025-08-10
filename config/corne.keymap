@@ -96,6 +96,7 @@
               &lt 3 LGUI &mo 1 &lt 4 SPACE   &kp BSPC &mo 2 &kp RET
                         >;
                 };
+        };
 
         combos {
                 compatible = "zmk,combos";
