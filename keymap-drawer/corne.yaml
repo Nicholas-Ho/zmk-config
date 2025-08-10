@@ -215,3 +215,50 @@ layers:
   - BSPC
   - {t: ▽, type: trans}
   - RET
+  qwerty:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ESC
+  - LCTRL
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - FSLSH
+  - RALT
+  - {t: LGUI, h: function}
+  - lower
+  - {t: SPACE, h: nav}
+  - BSPC
+  - raise
+  - RET
+combos:
+- p: [36, 41]
+  k: {t: qwerty, h: toggle}
+  l: [default, qwerty]
