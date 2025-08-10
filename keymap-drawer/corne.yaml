@@ -39,7 +39,7 @@ layers:
   - RALT
   - {t: LGUI, h: function}
   - lower
-  - SPACE
+  - {t: SPACE, h: nav}
   - BSPC
   - raise
   - RET
@@ -95,8 +95,8 @@ layers:
   - '#'
   - '&'
   - {t: ▽, type: trans}
-  - '['
-  - ']'
+  - '{'
+  - '}'
   - '%'
   - ESC
   - LCTRL
@@ -119,8 +119,8 @@ layers:
   - .
   - '~'
   - $
-  - '{'
-  - '}'
+  - '['
+  - ']'
   - '@'
   - RALT
   - {t: ▽, type: trans}
@@ -149,10 +149,10 @@ layers:
   - PG UP
   - Gui+L
   - INS
-  - DOWN
   - LEFT
-  - RIGHT
+  - DOWN
   - UP
+  - RIGHT
   - EP OFF
   - LSHFT
   - MUTE
@@ -169,6 +169,49 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - SPACE
+  - BSPC
+  - {t: ▽, type: trans}
+  - RET
+  nav:
+  - TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '}'
+  - '{'
+  - {t: ▽, type: trans}
+  - RALT
+  - LCTRL
+  - ^
+  - B
+  - W
+  - $
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - H
+  - J
+  - K
+  - L
+  - {t: ▽, type: trans}
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RALT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - BSPC
   - {t: ▽, type: trans}
   - RET
