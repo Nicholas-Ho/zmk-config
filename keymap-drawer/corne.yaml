@@ -250,11 +250,11 @@ layers:
   - M
   - ','
   - .
-  - FSLSH
+  - /
   - RALT
   - {t: LGUI, h: function}
   - lower
-  - {t: SPACE, h: nav}
+  - SPACE
   - BSPC
   - raise
   - RET
