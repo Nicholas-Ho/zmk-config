@@ -85,15 +85,15 @@
 
                 qwerty_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |      E      |  R  |       T      |   |  Y   |  U  |  I  |  O  |  P  | ESC |
-// | CTRL |  A  |  S  |      D      |  F  |       G      |   |  H   |  J  |  K  |  L  |  ;  |  '  |
-// | SHFT |  Z  |  X  |      C      |  V  |       B      |   |  N   |  M  |  ,  |  .  |  /  | ALT |
-//                    | GUI (LT:FN) | LWR | SPC (LT:NAV) |   | BKSP | RSE | RET |
+// |  TAB |  Q  |  W  |      E      |  R  |  T  |   |  Y   |  U  |  I  |  O  |  P  | ESC |
+// | CTRL |  A  |  S  |      D      |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  |  '  |
+// | SHFT |  Z  |  X  |      C      |  V  |  B  |   |  N   |  M  |  ,  |  .  |  /  | ALT |
+//                    | GUI (LT:FN) | LWR | SPC |   | BKSP | RSE | RET |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P     &kp ESC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI  &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
-              &lt 3 LGUI &mo 1 &lt 4 SPACE   &kp BSPC &mo 2 &kp RET
+                &lt 3 LGUI &mo 1 &kp SPACE   &kp BSPC &mo 2 &kp RET
                         >;
                 };
         };
