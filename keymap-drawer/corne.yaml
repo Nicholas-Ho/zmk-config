@@ -161,7 +161,7 @@ layers:
   - BRI DN
   - BRI UP
   - DEL
-  - {t: ▽, type: trans}
+  - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -175,22 +175,22 @@ layers:
   nav:
   - TAB
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+G
+  - '&gg_m'
+  - '&gt_m'
+  - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '}'
   - '{'
   - {t: ▽, type: trans}
-  - RALT
+  - ESC
   - LCTRL
   - ^
   - B
   - W
   - $
-  - {t: ▽, type: trans}
+  - '&cFiles_m'
   - {t: ▽, type: trans}
   - H
   - J
