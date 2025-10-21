@@ -27,13 +27,14 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings = <&kp COLON &kp LS(F) &kp I &kp L &kp E &kp S &kp RET>;
-                }
+                };
         };
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------Gallium v1---------------------------------------------
 // |  TAB |  B  |  L  |      D      |  C  |       V      |   |  J   |  Y  |  O  |  U  |  ,  | ESC |
 // | CTRL |  N  |  R  |      T      |  S  |       G      |   |  P   |  H  |  A  |  E  |  I  |  /  |
@@ -48,6 +49,7 @@
                 };
 
                 lower_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2   | BT3 | BT4  | BT5  |   |  +   |  7  |  8  |  9  | * | ESC |
 // |  CTRL | UNDO | PASTE | CUT | COPY | REDO |   |  -   |  4  |  5  |  6  | / |     |
@@ -62,6 +64,7 @@
                 };
 
                 raise_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  `  |  <  |  >  |  "  |  #  |   |  &   |     |  {  |  }  | % | ESC |
 // | CTRL |  !  |  -  |  +  |  =  |  _  |   | "|"  |  :  |  (  |  )  | ? |     |
@@ -76,6 +79,7 @@
                 };
 
                 function_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------------------------------------------------------------
 // |  F1  |    F2    |    F3    |  F4    |     F5      |     F6    |   |  F7  |  F8   | F9   | F10 |  F11  |     F12       |
 // | CTRL |   HOME   |    END   | PG_DN  |    PG_UP    |    LOCK   |   | INS  | LEFT  | DOWN | UP  | RIGHT | EXT_POWER_OFF |
@@ -90,6 +94,7 @@
                 };
 
                 nav_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------------------------------------------------------------
 // |  TAB |     | SHIFT+G |  gg  |  gt  | CTRL+W |   |      |     |  }  |  {  |   | ESC |
 // | CTRL |  ^  |    B    |  W   |  $   | :Files |   |      |  H  |  J  |  K  | L |     |
@@ -104,6 +109,7 @@
                 };
 
                 qwerty_layer {
+                        compatible = "zmk,layer";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |      E      |  R  |  T  |   |  Y   |  U  |  I  |  O  |  P  | ESC |
 // | CTRL |  A  |  S  |      D      |  F  |  G  |   |  H   |  J  |  K  |  L  |  ;  |  '  |
