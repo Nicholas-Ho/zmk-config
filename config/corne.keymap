@@ -10,6 +10,26 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+        macros {
+                gt_m: gt {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp G &kp T>;
+                };
+
+                gg_m: gg {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp G &kp G>;
+                };
+
+                cFiles_m: fzf_files {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp COLON &kp LS(F) &kp I &kp L &kp E &kp S &kp RET>;
+                }
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -57,29 +77,29 @@
 
                 function_layer {
 // -----------------------------------------------------------------------------------------
-// |  F1  |    F2    |    F3    |  F4    |     F5      |     F6    |   |  F7  | F8   | F9   | F10 |  F11  |     F12       |
-// | CTRL |   HOME   |    END   | PG_DN  |    PG_UP    |    LOCK   |   | INS  | LEFT | DOWN | UP  | RIGHT | EXT_POWER_OFF |
-// | SHFT | VOL_MUTE | VOL_DOWN | VOL_UP | BRIGHT_DOWN | BRIGHT_UP |   | DEL  |      |      |     |       |     ALT       |
-//                              |        |             |    SPC    |   | BKSP |      | RET  |
+// |  F1  |    F2    |    F3    |  F4    |     F5      |     F6    |   |  F7  |  F8   | F9   | F10 |  F11  |     F12       |
+// | CTRL |   HOME   |    END   | PG_DN  |    PG_UP    |    LOCK   |   | INS  | LEFT  | DOWN | UP  | RIGHT | EXT_POWER_OFF |
+// | SHFT | VOL_MUTE | VOL_DOWN | VOL_UP | BRIGHT_DOWN | BRIGHT_UP |   | DEL  | PSCRN |      |     |       |     ALT       |
+//                              |        |             |    SPC    |   | BKSP |       | RET  |
                         bindings = <
-   &kp  F1   &kp  F2    &kp F3        &kp F4       &kp F5       &kp F6       &kp F7   &kp F8   &kp F9   &kp F10 &kp F11 &kp F12
-   &kp LCTRL &kp HOME   &kp END       &kp PG_DN    &kp PG_UP    &kp LG(L)    &kp INS  &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &ext_power EP_OFF
-   &kp LSHFT &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp DEL  &trans   &trans   &trans  &trans  &kp RALT
-                                      &trans       &trans       &kp SPACE    &kp BSPC &trans   &kp RET
+   &kp  F1   &kp  F2    &kp F3        &kp F4       &kp F5       &kp F6       &kp F7   &kp F8    &kp F9   &kp F10 &kp F11 &kp F12
+   &kp LCTRL &kp HOME   &kp END       &kp PG_DN    &kp PG_UP    &kp LG(L)    &kp INS  &kp LEFT  &kp DOWN &kp UP  &kp RIGHT  &ext_power EP_OFF
+   &kp LSHFT &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp DEL  &kp PSCRN &trans   &trans  &trans  &kp RALT
+                                      &trans       &trans       &kp SPACE    &kp BSPC &trans    &kp RET
                         >;
                 };
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |     |     |     |     |     |   |      |     |  }  |  {  |   | ESC |
-// | CTRL |  ^  |  B  |  W  |  $  |     |   |      |  H  |  J  |  K  | L |     |
-// | SHFT |     |     |     |     |     |   |      |     |     |     |   | ALT |
-//                    |     |     |     |   | BKSP |     | RET |
+// |  TAB |     | SHIFT+G |  gg  |  gt  | CTRL+W |   |      |     |  }  |  {  |   | ESC |
+// | CTRL |  ^  |    B    |  W   |  $   | :Files |   |      |  H  |  J  |  K  | L |     |
+// | SHFT |     |         |      |      |        |   |      |     |     |     |   | ALT |
+//                        |      |      |        |   | BKSP |     | RET |
                         bindings = <
-   &kp  TAB  &trans    &trans &trans &trans   &trans   &trans &trans &kp RBRC &kp LBRC &trans &kp RALT
-   &kp LCTRL &kp CARET &kp B  &kp W  &kp DLLR &trans   &trans &kp H  &kp J    &kp K    &kp L  &trans
-   &kp LSHFT &trans    &trans &trans &trans   &trans   &trans &trans &trans   &trans   &trans &kp RALT
-                                &trans &trans &trans   &kp BSPC &trans &kp RET
+   &kp  TAB  &trans    &kp LS(G) &gg_m  &gt_m    &kp LC(W)   &trans &trans &kp RBRC &kp LBRC &trans &kp ESC
+   &kp LCTRL &kp CARET &kp B     &kp W  &kp DLLR &cFiles_m   &trans &kp H  &kp J    &kp K    &kp L  &trans
+   &kp LSHFT &trans    &trans    &trans &trans   &trans      &trans &trans &trans   &trans   &trans &kp RALT
+                                   &trans &trans &trans      &kp BSPC &trans &kp RET
                         >;
                 };
 
