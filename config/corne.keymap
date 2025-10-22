@@ -22,6 +22,12 @@
                         #binding-cells = <0>;
                         bindings = <&kp G &kp G>;
                 };
+                
+                cFiles_m: fzf_files {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp COLON &kp LS(F) &kp I &kp L &kp E &kp S &kp RET>;
+                };
         };
 
         keymap {
@@ -91,7 +97,7 @@
 //                        |      |      |        |   | BKSP |     | RET |
                         bindings = <
    &kp  TAB  &trans    &kp LS(G) &gg_m  &gt_m    &kp LC(W)   &trans &trans &kp RBRC &kp LBRC &trans &kp ESC
-   &kp LCTRL &kp CARET &kp B     &kp W  &kp DLLR &trans   &trans &kp H  &kp J    &kp K    &kp L  &trans
+   &kp LCTRL &kp CARET &kp B     &kp W  &kp DLLR &cFiles_m   &trans &kp H  &kp J    &kp K    &kp L  &trans
    &kp LSHFT &trans    &trans    &trans &trans   &trans      &trans &trans &trans   &trans   &trans &kp RALT
                                    &trans &trans &trans      &kp BSPC &trans &kp RET
                         >;
