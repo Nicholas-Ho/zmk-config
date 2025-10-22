@@ -176,8 +176,8 @@ layers:
   - TAB
   - {t: ▽, type: trans}
   - Sft+G
-  - '&gg_m'
-  - '&gt_m'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -190,7 +190,7 @@ layers:
   - B
   - W
   - $
-  - '&cFiles_m'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - H
   - J
