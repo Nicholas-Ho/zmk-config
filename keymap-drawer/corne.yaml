@@ -162,7 +162,7 @@ layers:
   - BRI UP
   - DEL
   - PSCRN
-  - {t: ▽, type: trans}
+  - Gui+PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RALT
