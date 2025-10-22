@@ -10,6 +10,20 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+        macros {
+                gt_m: gt {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp G &kp T>;
+                };
+
+                gg_m: gg {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&kp G &kp G>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -76,7 +90,7 @@
 // | SHFT |     |         |      |      |        |   |      |     |     |     |   | ALT |
 //                        |      |      |        |   | BKSP |     | RET |
                         bindings = <
-   &kp  TAB  &trans    &kp LS(G) &trans  &trans    &kp LC(W)   &trans &trans &kp RBRC &kp LBRC &trans &kp ESC
+   &kp  TAB  &trans    &kp LS(G) &gg_m  &gt_m    &kp LC(W)   &trans &trans &kp RBRC &kp LBRC &trans &kp ESC
    &kp LCTRL &kp CARET &kp B     &kp W  &kp DLLR &trans   &trans &kp H  &kp J    &kp K    &kp L  &trans
    &kp LSHFT &trans    &trans    &trans &trans   &trans      &trans &trans &trans   &trans   &trans &kp RALT
                                    &trans &trans &trans      &kp BSPC &trans &kp RET

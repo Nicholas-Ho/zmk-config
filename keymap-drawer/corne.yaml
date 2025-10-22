@@ -176,8 +176,8 @@ layers:
   - TAB
   - {t: ▽, type: trans}
   - Sft+G
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&gg_m'
+  - '&gt_m'
   - Ctl+W
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
